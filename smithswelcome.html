@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiths welcome</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #323133, #222222);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: left;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin: 0;
+            text-shadow: 0px 0px 20px #000;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #c7c7d6;
+            margin: 10px 0 20px;
+            text-shadow: 0px 0px 20px #000;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .cube {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(212, 93, 2, 0.1);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .cube:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+
+        .cube:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            animation-duration: 5s;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(-50%, -50%);
+            }
+            50% {
+                transform: translate(calc(-50% + 20px), calc(-50% - 20px));
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome smiths</h1>
+        <p>Are you a Tpack creator? Ready to earn exciting rewards? 
+You're in the perfect place!</p>
+        <div class="buttons">
+            <a href="https://discord.gg/a9KfBW4TUj" target="_blank" class="button">Sign up</a>
+        </div>
+    </header>
+    <footer>&copy; 2024 Team - X   All Rights Reserved.</footer>
+    <div class="animated-bg">
+        <div class="cube" style="top: 20%; left: 25%;"></div>
+        <div class="cube" style="top: 50%; left: 75%;"></div>
+        <div class="cube" style="top: 80%; left: 40%;"></div>
+    </div>
+</body>
+</html>
