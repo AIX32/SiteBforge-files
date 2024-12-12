@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>App Showcase</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/ZoOwqun.png') no-repeat center center;
+            background-size: cover;
+        }
+        
+        html, body {
+    height: 100%; /* Ensure the body covers the full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #444;
+            padding: 0.5rem 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+.container {
+    flex-grow: 1; /* Ensures the container takes up the remaining space */
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+        .feature {
+            background-color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            color: #fff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .feature i {
+            font-size: 3rem;
+            margin-right: 1rem;
+        }
+        .feature h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        .feature p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FEATURES</h1>
+    </header>
+    <div class="container">
+        <div class="feature" id="feature1">
+            <i class="fas fa-globe"></i>
+            <div>
+                <h2>Everything in One Place</h2>
+                <p>Play Bloxd.io seamlessly within BloxdForge—no need to switch sites or leave the action!</p>
+            </div>
+        </div>
+        <div class="feature" id="feature2">
+            <i class="fas fa-cogs"></i>
+            <div>
+                <h2>Workshop</h2>
+                <p>Discover the best Tpacks in the game, right at your fingertips! Plus, enjoy access to exclusive Tpacks you won’t find anywhere else!</p>
+            </div>
+        </div>
+        <div class="feature" id="feature3">
+            <i class="fas fa-book"></i>
+            <div>
+                <h2>Wiki</h2>
+                <p>An in-app Wiki packed with useful information—better than the official one!</p>
+            </div>
+        </div>
+        <div class="feature" id="feature4">
+            <i class="fas fa-moon"></i>
+            <div>
+                <h2>Dark Mode and Coordinate Saver</h2>
+                <p>Enjoy a sleek dark mode for Bloxd.io, along with a handy feature to save your coordinates!</p>
+            </div>
+        </div>
+        <div class="feature" id="feature5">
+            <i class="fas fa-paint-brush"></i>
+            <div>
+                <h2>Skin Maker</h2>
+                <p>We have made skins work for bloxd.io!</p>
+            </div>
+        </div>
+</body>
+</html>
