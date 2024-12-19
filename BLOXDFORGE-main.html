@@ -53,15 +53,38 @@
             font-size: 20px;
             margin-bottom: 30px;
         }
-        .buttons a {
-            text-decoration: none;
-            padding: 15px 30px;
-            margin: 0 10px;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-.download-btn, .store-btn {
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Add spacing between the buttons */
+        margin-top: 30px;
+        margin-right: 10px;
+    }
+    .buttons a {
+        text-decoration: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    
+    .buttons a i {
+    margin-right: 10px; /* Adjust this value as needed */
+}
+
+    .download-btn, .store-btn {
+        box-sizing: border-box;
+        height: 55px; /* Ensure both buttons have the same height */
+        line-height: 1; /* Adjust line height to center content */
+    }
+
+
+.store-btn {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
@@ -70,20 +93,10 @@
     transition: all 0.3s ease;
 }
 
-.download-btn {
-    background-color: #4CAF50;
-    color: white;
-}
 
 .store-btn {
     background-color: #FFA500;
     color: white;
-}
-
-.download-btn:hover {
-    background-color: #45a049; /* Darker shade of green */
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .store-btn:hover {
@@ -91,6 +104,54 @@
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+.download-btn {
+    position: relative;
+    background-color: #4CAF50; /* Green base color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden; /* Ensures the shine stays within the button bounds */
+    display: inline-block; /* Prevents the button from stretching */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start completely off the left side */
+    width: 100%; /* Match the button's width */
+    height: 100%; /* Match the button's height */
+    background: rgba(255, 255, 255, 0.3); /* Shine effect */
+    transform: skewX(-25deg); /* Diagonal effect */
+    transition: left 0.5s; /* Smooth animation */
+}
+
+.download-btn:hover::before {
+    left: 100%; /* Slide to the right, beyond the button */
+}
+
+.download-btn:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+    background-color: #45a049; /* Slightly darker green for hover */
+}
+
+.download-btn:active {
+    transform: scale(0.95); /* Slight shrink for "pressed" effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+    background-color: #3e8e41; /* Darker green for active state */
+}
+
+
     </style>
 </head>
 <body>
@@ -114,7 +175,7 @@
                download="BloxdForge-1.0.html">
                 <i class="fas fa-download"></i> DOWNLOAD
             </a>
-            <a href="https://raw.githack.com/AIX32/SiteBforge-files/refs/heads/main/Moredownloads.html" class="store-btn"><i class="fas fa-shopping-cart"></i> MORE</a>
+            <a href="https://raw.githack.com/AIX32/SiteBforge-files/refs/heads/main/Moredownloads.html" class="store-btn"><i class="fas fa-list"></i> MORE</a>
         </div>
     </div>
 </body>
